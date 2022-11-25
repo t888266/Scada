@@ -14,8 +14,10 @@ public class AppWSClient : Singleton<AppWSClient>
         {
             if (wss.Count >= 0)
             {
-                Debug.Log((Helper.DeviceConfigHelper.deviceConfigList.CurrentOptionData() as DeviceConfigOption)?.name);
-                return wss[(Helper.DeviceConfigHelper.deviceConfigList.CurrentOptionData() as DeviceConfigOption)?.name];
+                Debug.Log((Helper.DeviceConfigHelper.deviceConfigList.CurrentOptionData() as 
+                DeviceConfigOption)?.name);
+                return wss[(Helper.DeviceConfigHelper.deviceConfigList.CurrentOptionData() as 
+                DeviceConfigOption)?.name];
             }
             return null;
         }
@@ -26,7 +28,9 @@ public class AppWSClient : Singleton<AppWSClient>
         {
             return;
         }
-        string url = $"{AccountData.Instance.UrlSO.appWsUrl}?deviceKey={AccountData.Instance.Device.CurrentDevice.DeviceModel.DeviceKey}&typeVibration={typeVibration}&token={AccountData.Instance.Token}";
+        string url = $"{AccountData.Instance.UrlSO.appWsUrl}?deviceKey={AccountData.Instance.
+        Device.CurrentDevice.DeviceModel.DeviceKey}&typeVibration={typeVibration}&token=
+        {AccountData.Instance.Token}";
         Debug.Log(url);
         WebSocket ws = new WebSocket(url);
         ws.OnOpen += () =>
@@ -77,14 +81,7 @@ public class AppWSClient : Singleton<AppWSClient>
         }
 #endif
     }
-    // public async void Disconnect(string typeVibration)
-    // {
-    //     if (!wss.ContainsKey(typeVibration))
-    //     {
-    //         return;
-    //     }
-    //     await wss[typeVibration].Close();
-    // }
+   
     public async void DisconnectAll()
     {
         foreach (WebSocket ws in wss.Values)
