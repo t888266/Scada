@@ -14,14 +14,16 @@ namespace BinaryConfig
     public class Vector2_SS : ISerializationSurrogate
     {
         //Serialize Vector2
-        public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext context)
+        public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext
+         context)
         {
             Vector2 v2 = (Vector2)obj;
             info.AddValue("x", v2.x);
             info.AddValue("y", v2.y);
         }
         //Deserialize Vector2
-        public System.Object SetObjectData(System.Object obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector)
+        public System.Object SetObjectData(System.Object obj, SerializationInfo info, 
+        StreamingContext context, ISurrogateSelector selector)
         {
             Vector2 v2 = (Vector2)obj;
 
@@ -36,7 +38,8 @@ namespace BinaryConfig
     public class Vector3_SS : ISerializationSurrogate
     {
         //Serialize Vector3
-        public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext context)
+        public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext
+         context)
         {
             Vector3 v3 = (Vector3)obj;
             info.AddValue("x", v3.x);
@@ -44,7 +47,8 @@ namespace BinaryConfig
             info.AddValue("z", v3.z);
         }
         //Deserialize Vector3
-        public System.Object SetObjectData(System.Object obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector)
+        public System.Object SetObjectData(System.Object obj, SerializationInfo info, 
+        StreamingContext context, ISurrogateSelector selector)
         {
             Vector3 v3 = (Vector3)obj;
 
@@ -60,7 +64,8 @@ namespace BinaryConfig
     public class Vector4_SS : ISerializationSurrogate
     {
         //Serialize Vector4
-        public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext context)
+        public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext 
+        context)
         {
             Vector4 v4 = (Vector4)obj;
             info.AddValue("x", v4.x);
@@ -69,7 +74,8 @@ namespace BinaryConfig
             info.AddValue("w", v4.w);
         }
         //Deserialize Vector4
-        public System.Object SetObjectData(System.Object obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector)
+        public System.Object SetObjectData(System.Object obj, SerializationInfo info, 
+        StreamingContext context, ISurrogateSelector selector)
         {
             Vector4 v4 = (Vector4)obj;
 
@@ -87,7 +93,8 @@ namespace BinaryConfig
     public class Color_SS : ISerializationSurrogate
     {
         //Serialize Color
-        public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext context)
+        public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext
+         context)
         {
             Color color = (Color)obj;
             info.AddValue("r", color.r);
@@ -96,7 +103,8 @@ namespace BinaryConfig
             info.AddValue("a", color.a);
         }
         //Deserialize Color
-        public System.Object SetObjectData(System.Object obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector)
+        public System.Object SetObjectData(System.Object obj, SerializationInfo info,
+         StreamingContext context, ISurrogateSelector selector)
         {
             Color color = (Color)obj;
 
@@ -113,7 +121,8 @@ namespace BinaryConfig
     public class Quaternion_SS : ISerializationSurrogate
     {
         //Serialize Quaternion
-        public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext context)
+        public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext
+         context)
         {
             Quaternion qua = (Quaternion)obj;
             info.AddValue("x", qua.x);
@@ -122,7 +131,8 @@ namespace BinaryConfig
             info.AddValue("w", qua.w);
         }
         //Deserialize Quaternion
-        public System.Object SetObjectData(System.Object obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector)
+        public System.Object SetObjectData(System.Object obj, SerializationInfo info, 
+        StreamingContext context, ISurrogateSelector selector)
         {
             Quaternion qua = (Quaternion)obj;
 
