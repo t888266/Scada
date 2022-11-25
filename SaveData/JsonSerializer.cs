@@ -16,7 +16,7 @@ public class JsonSerializer : Serializer
         T data = default(T);
         if (SaveLoadData.HasSaved(filename))
         {
-            data = JsonUtility.FromJson<T>(File.ReadAllText(SaveLoadData.GetFilePath(filename)));
+          data = JsonUtility.FromJson<T>(File.ReadAllText(SaveLoadData.GetFilePath(filename)));
         }
         return data;
     }
