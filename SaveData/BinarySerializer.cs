@@ -65,8 +65,9 @@ namespace BinaryConfig
             {
                 string type = typeof(T).ToString();
                 Debug.LogError(
-                    "Class <b><color=white>" + type + "</color></b> is not marked as Serializable, "
-                    + "make sure to add <b><color=white>[System.Serializable]</color></b> at the top of your " + type + " class."
+                "Class <b><color=white>" + type + "</color></b> is not marked as Serializable,"
+                + "make sure to add <b><color=white>[System.Serializable]</color></b> at the 
+                top of your " + type + " class."
                 );
             }
 
@@ -82,11 +83,16 @@ namespace BinaryConfig
             Color_SS co_ss = new Color_SS();
             Quaternion_SS qu_ss = new Quaternion_SS();
 
-            surrogateSelector.AddSurrogate(typeof(Vector2), new StreamingContext(StreamingContextStates.All), v2_ss);
-            surrogateSelector.AddSurrogate(typeof(Vector3), new StreamingContext(StreamingContextStates.All), v3_ss);
-            surrogateSelector.AddSurrogate(typeof(Vector4), new StreamingContext(StreamingContextStates.All), v4_ss);
-            surrogateSelector.AddSurrogate(typeof(Color), new StreamingContext(StreamingContextStates.All), co_ss);
-            surrogateSelector.AddSurrogate(typeof(Quaternion), new StreamingContext(StreamingContextStates.All), qu_ss);
+            surrogateSelector.AddSurrogate(typeof(Vector2), new StreamingContext
+            (StreamingContextStates.All), v2_ss);
+            surrogateSelector.AddSurrogate(typeof(Vector3), new StreamingContext
+            (StreamingContextStates.All), v3_ss);
+            surrogateSelector.AddSurrogate(typeof(Vector4), new StreamingContext
+            (StreamingContextStates.All), v4_ss);
+            surrogateSelector.AddSurrogate(typeof(Color), new StreamingContext
+            (StreamingContextStates.All), co_ss);
+            surrogateSelector.AddSurrogate(typeof(Quaternion), new StreamingContext
+            (StreamingContextStates.All), qu_ss);
 
             return surrogateSelector;
         }
