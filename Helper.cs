@@ -12,7 +12,8 @@ namespace Helper
     {
         public static UrlSO Urls { get; set; }
         private static Color pressButtonColor = new Color(0.736f, 0.736f, 0.736f, 1);
-        static Dictionary<float, WaitForSecondsRealtime> waitRealTime = new Dictionary<float, WaitForSecondsRealtime>();
+        static Dictionary<float, WaitForSecondsRealtime> waitRealTime = new Dictionary<float,
+         WaitForSecondsRealtime>();
 
         public static Color PressButtonColor { get => pressButtonColor; }
 
@@ -34,7 +35,8 @@ namespace Helper
     public static class AccountHelper
     {
         static string updateUrl = Helper.GameHelper.Urls.infoUpdateUrl;
-        public static IEnumerator UpdateRequest(string typeUpdate, string data, string userKey, System.Action onDataChanged = null, System.Action<UnityWebRequest> onError = null)
+        public static IEnumerator UpdateRequest(string typeUpdate, string data, string userKey,
+         System.Action onDataChanged = null, System.Action<UnityWebRequest> onError = null)
         {
             string url = $"{updateUrl}/{typeUpdate}";
             WWWForm form = new WWWForm();
